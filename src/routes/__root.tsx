@@ -1,5 +1,5 @@
 import { Outlet, RootRoute } from "@tanstack/react-router";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 
