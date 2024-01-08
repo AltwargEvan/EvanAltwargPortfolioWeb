@@ -3,8 +3,11 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      transitionProperty: {
+        height: "height",
+      },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        BebasNeue: ["Bebas Neue", "sans-serif"],
       },
     },
   },
