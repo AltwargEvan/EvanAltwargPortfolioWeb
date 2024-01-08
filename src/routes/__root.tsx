@@ -1,6 +1,7 @@
 import { Outlet, RootRoute } from "@tanstack/react-router";
 import Navbar from "../components/Navbar";
 import React from "react";
+import { Toaster } from "@/components/ui/toaster";
 
 const RootComponent = () => {
   return (
@@ -8,6 +9,7 @@ const RootComponent = () => {
       <div className="max-w-7xl w-screen h-screen flex flex-col px-8">
         <Navbar />
         <Outlet />
+        <Toaster />
       </div>
     </div>
   );
