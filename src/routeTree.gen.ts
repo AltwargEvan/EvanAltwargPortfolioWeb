@@ -3,6 +3,7 @@ import { Route as ResumeImport } from "./routes/resume"
 import { Route as ProjectsImport } from "./routes/projects"
 import { Route as AboutImport } from "./routes/about"
 import { Route as IndexImport } from "./routes"
+import { Route as ProjectIdImport } from "./routes/project.$id"
 
 const ResumeRoute = ResumeImport.update({
   path: "/resume",
@@ -24,6 +25,11 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const ProjectIdRoute = ProjectIdImport.update({
+  path: "/project/$id",
+  getParentRoute: () => rootRoute,
+} as any)
+
 declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
     "/": {
@@ -42,6 +48,10 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof ResumeImport
       parentRoute: typeof rootRoute
     }
+    "/project/$id": {
+      preLoaderRoute: typeof ProjectIdImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -50,4 +60,5 @@ export const routeTree = rootRoute.addChildren([
   AboutRoute,
   ProjectsRoute,
   ResumeRoute,
+  ProjectIdRoute,
 ])
