@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FileRoute } from "@tanstack/react-router";
-import { Github, Linkedin, Mail, ClipboardCheck } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 export const Route = new FileRoute('/').createRoute({
   component: Home,
 });
@@ -16,9 +16,9 @@ function Home() {
   };
 
   return (
-    <div className="flex h-screen justify-between  items-center flex-col text-5xl md:text-8xl select-none sm:text-8xl lg:text-9xl">
+    <div className="flex h-screen justify-between  items-center flex-col text-5xl md:text-8xl sm:text-8xl lg:text-9xl">
       <div></div>
-      <div className="flex flex-col justify-center text-center py-8  gap-y-8 md:py-12">
+      <div className="flex flex-col justify-center text-center py-8  gap-y-8 md:py-12  select-none">
         <span>Hey, I'm Evan</span>
         <span>I Code Stuff</span>
       </div>
