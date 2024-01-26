@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { ReactNode } from "react";
 
-// ROUTER
-
 // TYPES
 interface ILayoutProps {
   children: ReactNode;
