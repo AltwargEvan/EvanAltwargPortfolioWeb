@@ -18,6 +18,7 @@ module.exports = {
       },
     },
     extend: {
+      flex: ["min-w-0"],
       height: {
         screen: ["100vh", "100dvh"],
       },

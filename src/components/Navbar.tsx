@@ -19,12 +19,12 @@ const NavPages = () => {
       <Link to="/projects" className=" hover:text-neutral-200">
         Projects
       </Link>
-      <Link to="/resume" className=" hover:text-neutral-200">
+      {/* <Link to="/resume" className=" hover:text-neutral-200">
         Resume
       </Link>
       <Link to="/about" className=" hover:text-neutral-200">
         About
-      </Link>
+      </Link> */}
     </>
   );
 };

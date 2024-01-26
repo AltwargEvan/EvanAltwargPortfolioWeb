@@ -1,4 +1,4 @@
-import { FileRoute, Link } from "@tanstack/react-router";
+import { FileRoute } from "@tanstack/react-router";
 import React from "react";
 import {
   Carousel,
@@ -15,7 +15,7 @@ type ProjectProps = {
 };
 const Project = ({ project }: ProjectProps) => {
   return (
-    <Link to={`/project/$id`} params={{ id: project.id }} className="group">
+    <a href={project.link} target="_blank" className="group">
       <div className="rounded border border-neutral-800 flex justify-center">
         {project.thumbnail}
       </div>
@@ -26,7 +26,7 @@ const Project = ({ project }: ProjectProps) => {
           {project.description}
         </span>
       </div>
-    </Link>
+    </a>
   );
 };
 const ProjectsComponent = () => {
@@ -45,8 +45,8 @@ const ProjectsComponent = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="xl:hidden" />
-          <CarouselNext className="xl:hidden" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </PageTransitionLayout>
